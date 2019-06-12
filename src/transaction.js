@@ -396,7 +396,7 @@ class Transaction {
         return sum + 40 + varSliceSize(input.script);
       }, 0) +
       this.outs.reduce((sum, output) => {
-        return sum + 8 + varSliceSize(output.script);
+        return sum + 8 + varSliceSize(output.script) + 4;
       }, 0) +
       (hasWitnesses
         ? this.ins.reduce((sum, input) => {
@@ -436,6 +436,7 @@ class Transaction {
       vector.forEach(writeVarSlice);
     }
     writeInt32(this.version);
+    writeInt32(Math.floor(Date.now() / 1000));
     const hasWitnesses = _ALLOW_WITNESS && this.hasWitnesses();
     if (hasWitnesses) {
       writeUInt8(Transaction.ADVANCED_TRANSACTION_MARKER);
