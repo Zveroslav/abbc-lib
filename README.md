@@ -8,7 +8,7 @@ Released under the terms of the [MIT LICENSE](LICENSE).
 
 ## Installation
 ``` bash
-npm install bitcoinjs-lib
+npm install abbc-lib
 ```
 
 Typically we support the [Node Maintenance LTS version](https://github.com/nodejs/Release).
