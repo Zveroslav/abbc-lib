@@ -1,18 +1,17 @@
 {
-  "name": "bitcoinjs-lib",
-  "version": "5.0.5",
-  "description": "Client-side Bitcoin JavaScript library",
+  "name": "abbc-lib",
+  "version": "0.0.1",
+  "description": "Client-side ABBC JavaScript library",
   "main": "./src/index.js",
   "types": "./types/index.d.ts",
   "engines": {
     "node": ">=8.0.0"
   },
   "keywords": [
-    "bitcoinjs",
-    "bitcoin",
+    "abbc",
     "browserify",
     "javascript",
-    "bitcoinjs"
+    "abbcjs"
   ],
   "scripts": {
     "build": "npm run clean && tsc -p ./tsconfig.json && npm run formatjs",
@@ -38,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitcoinjs/bitcoinjs-lib.git"
+    "url": "https://github.com/Zveroslav/abbc-lib.git"
   },
   "files": [
     "src",
